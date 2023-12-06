@@ -1,7 +1,6 @@
 package br.edu.scl.ifsp.ads.onemessagechat.model
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
@@ -29,7 +28,4 @@ interface MessageRoomDao {
 
     @Update
     fun updateContact(contact: Message): Int
-
-    @Delete
-    fun deleteContact(contact: Message): Int
 }

@@ -24,8 +24,6 @@ class MesageRoomController(private val mainActivity: MainActivity) {
         }.start()
     }
 
-    fun getContact(id: Int) = contactDaoImpl.retrieveContact(id)
-
     fun getContacts() {
         Thread{
             mainActivity.updateContactListHandler.apply {
@@ -47,10 +45,4 @@ class MesageRoomController(private val mainActivity: MainActivity) {
         }.start()
     }
 
-    fun removeContact(contact: Message){
-        Thread {
-            contactDaoImpl.deleteContact(contact)
-            getContacts()
-        }.start()
-    }
 }
