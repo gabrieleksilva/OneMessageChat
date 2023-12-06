@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.scl.ifsp.ads.onemessagechat.R
 import br.edu.scl.ifsp.ads.onemessagechat.adapter.MessageAdapter
+import br.edu.scl.ifsp.ads.onemessagechat.controller.MesageRoomController
 import br.edu.scl.ifsp.ads.onemessagechat.controller.MessageRtDbFbController
 import br.edu.scl.ifsp.ads.onemessagechat.databinding.ActivityMainBinding
 import br.edu.scl.ifsp.ads.onemessagechat.model.Constant.CONTACT_ARRAY
@@ -30,8 +31,8 @@ class MainActivity : AppCompatActivity() {
     private val contactList: MutableList<Message> = mutableListOf()
 
     //Controller para quem faz as chamadas no BD
-    private val contactController: MessageRtDbFbController by lazy {
-        MessageRtDbFbController(this)
+    private val contactController: MesageRoomController by lazy {
+        MesageRoomController(this)
     }
 
     private val originalContactList: MutableList<Message> = mutableListOf()
@@ -54,8 +55,7 @@ class MainActivity : AppCompatActivity() {
 
             //Busca os contatos ou atualiza a lista de acordo com o tipo da mensagem
             if(msg.what == GET_CONTACTS_MSG){
-                //Busca os contatos de acordo com o intervalo pre-definido e agenda nova busca
-                contactController.getContacts()
+                //Busca os contatos de acordo com o intervalo pre-definido e agenda nova buscacontactController.getContacts()
                 sendMessageDelayed(obtainMessage().apply { what = GET_CONTACTS_MSG }, GET_CONTACTS_INTERVAL)
             } else{
                 msg.data.getParcelableArray(CONTACT_ARRAY)?.also { contactArray ->
