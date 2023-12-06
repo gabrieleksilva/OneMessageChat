@@ -1,11 +1,11 @@
 package br.edu.scl.ifsp.ads.onemessagechat.model
 
 interface MessageDao {
-    fun createContact(contact: Contact): Int
+    fun createContact(contact: Message): Int
 
-    fun retrieveContact(id: Int): Contact?
+    fun retrieveContact(id: Int): Message?
 
-    fun retrieveContacts(): MutableList<Contact>
+    fun retrieveContacts(): MutableList<Message>
 
-    fun updateContact(contact: Contact): Int
+    fun updateContact(contact: Message): Int
 }

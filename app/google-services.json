@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "704272559974",
+    "project_id": "onemessagechatgabriele",
+    "storage_bucket": "onemessagechatgabriele.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704272559974:android:0acfe9732f7e02cf30a2a7",
+        "android_client_info": {
+          "package_name": "br.edu.scl.ifsp.ads.onemessagechat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOSG0Idh48htPVxmDRMoZ6-tuXzId6uAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

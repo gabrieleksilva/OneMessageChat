@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbarIn" />
 
     <EditText
-        android:id="@+id/MessageEt"
+        android:id="@+id/messageEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -44,6 +44,6 @@
         android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MessageEt" />
+        app:layout_constraintTop_toBottomOf="@+id/messageEt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
